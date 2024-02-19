@@ -1,0 +1,16 @@
+terraform init
+terraform workspace new $ENVIRONMENT || true
+terraform workspace select $ENVIRONMENT
+terraform init
+
+
+terraform plan -var-file="environments/${ENVIRONMENT}.tfvars"
+
+read -t 200 -p "Continue? (Y/N) [Timeout in 180 seconds]: " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+
+terraform apply -auto-approve -var-file="environments/${ENVIRONMENT}.tfvars"
+
+
+
+
+bash main.sh dev
