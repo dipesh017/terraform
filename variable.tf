@@ -7,3 +7,6 @@ variable "module_vpc_cidr" {
 variable "azs" {
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
+variable "Environment" {
+  default = "dev"
+}
