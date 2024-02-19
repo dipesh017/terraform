@@ -1,0 +1,13 @@
+AWS profile
+
+.aws -> credentials
+
+
+[default]
+aws_access_key
+secret
+[prod]
+aws_access_key=prod
+secret=prod
+
+AWS_PROFILE=prod terraform apply
