@@ -6,4 +6,33 @@ output.tf - output
 version.tf - contains version details for terraform and cloud provider
 
 
+---------------------------------------------------
+How to use Modules
 
+Create a folder - modules 0 and download the code inthat'
+
+resource.tf
+
+module "vpc" {
+  source = "./modules/terraform-aws-vpc-new"
+
+  name = ""
+}
+
+Incase we want to override any value from variable.tf has to pass via resource,tf only.
+
+No manual changes are required in module code ideally.
+
+---------------------------------------------------
+
+We refer a resource - 
+
+resource_type.resource_name.value
+aws_vpc.main.id
+
+We refer a resource in a module - 
+
+module.module_name.output_value
+
+module.vpc.vpc_id
+module.vpc.public_subnets[2]
