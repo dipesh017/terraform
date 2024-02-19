@@ -8,13 +8,13 @@ module "vpc" {
   private_subnets = var.private_subnets
   public_subnets  = var.public_subnets
 
-  enable_nat_gateway = true
-  single_nat_gateway = true
+  enable_nat_gateway     = true
+  single_nat_gateway     = true
   one_nat_gateway_per_az = false
-  enable_vpn_gateway = false
+  enable_vpn_gateway     = false
 
   tags = {
-    Terraform = "true"
+    Terraform   = "true"
     Environment = var.Environment
   }
 }

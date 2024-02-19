@@ -1,14 +1,14 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.37.0"
     }
   }
   backend "s3" {
-    bucket = "terraform-tka"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+    bucket         = "terraform-tka"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
     dynamodb_table = "terraform"
   }
 }
@@ -19,5 +19,6 @@ provider "aws" {
 }
 provider "aws" {
   # Configuration options
+  alias  = "mumbai"
   region = "ap-south-1"
 }
