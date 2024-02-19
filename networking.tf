@@ -1,3 +1,10 @@
+resource "aws_vpc" "this" {
+  cidr_block = var.vpc_cidr
+  tags = {
+    Name = "tka-vpc"
+  }
+}
+
 resource "aws_subnet" "main" {
   vpc_id     = aws_vpc.this.id
   cidr_block = "10.100.1.0/24"
@@ -15,7 +22,9 @@ resource "aws_subnet" "main2" {
     Name = "public-subnet-2"
   }
 }
-
+variable "vpc_cidr" {
+  
+}
 output "vpc_id" {
   value = aws_vpc.this.id
 }
