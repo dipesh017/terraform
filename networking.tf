@@ -23,7 +23,7 @@ resource "aws_subnet" "main2" {
   }
 }
 variable "vpc_cidr" {
-  
+  default = "10.100.0.0/16"
 }
 output "vpc_id" {
   value = aws_vpc.this.id
