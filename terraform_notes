@@ -1,3 +1,10 @@
+Terraform Init- 
+1. Adding new provider
+2. Changes in backend conf
+3. Adding new module
+
+----------------------------------------------------------------------------------
+
 2 states in terraform
 
 Desired state: what you need / desire/ want - *.tf
@@ -18,3 +25,11 @@ In aws - s3
 
 
 
+----------------------------------------------------------------------------------
+
+Terraform state file Locking 
+
+Before making any changes, user needs to lock the file in s3
+
+create a table in dynamodb, primary key - LockID
+Utilise this dynamo table in terraform
