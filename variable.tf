@@ -10,3 +10,9 @@ variable "azs" {
 variable "Environment" {
   default = "dev"
 }
+variable "private_subnets" {
+  
+}
+variable "public_subnets" {
+  
+}
