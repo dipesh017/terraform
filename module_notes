@@ -9,7 +9,7 @@ version.tf - contains version details for terraform and cloud provider
 ---------------------------------------------------
 How to use Modules
 
-Create a folder - modules 0 and download the code inthat'
+Create a folder - modules and download the code inthat'
 
 resource.tf
 

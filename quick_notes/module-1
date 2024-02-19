@@ -1,0 +1,12 @@
+aws_notes
+----------
+git_notes
+----------
+basic_notes
+
+
+Pre req. - Git linking and AWS Authentication
+1. Create resource, understand execution
+2. state file in s3 along with dyanmodb linking - versioning, encrp.
+3. Three tier networking - VPC, 4 Subnets [1 public, 2 private], IGW, NAT, Route tables
+
