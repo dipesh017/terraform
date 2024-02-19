@@ -1,0 +1,9 @@
+Modules is set of tf files for reusability
+
+main.tf - actual code - resources
+variable.tf - variablised - default values
+output.tf - output 
+version.tf - contains version details for terraform and cloud provider
+
+
+
