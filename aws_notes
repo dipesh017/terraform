@@ -1,0 +1,15 @@
+AWS Aythentication Setup - 
+
+2 ways - access keys and iam roles
+
+Access keys way ->
+We go to IAM -> Create a IAM user with admin policy
+We create secret credentials, we get access and secret keys
+On system -> install aws cli
+apt-get install aws-cli
+
+aws configure
+enter the keys
+
+IAM Role way ->
+Create a IAM role-> admin policy  and attach this role to the EC2 machine

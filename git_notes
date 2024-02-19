@@ -1,0 +1,31 @@
+https://www.javatpoint.com/git
+
+
+Create a git hub repository
+Public and private
+public - anyone can read
+private - only you can read
+
+AUTH->
+ssh-keygen [id_rsa, id_rsa.pub in .ssh]
+go to github account -> settings -> ssh and gpg keys
+add a ssh key
+copy the content of id_rsa.pub
+
+REPO LINKING->
+In your local system [laptop] - we created a folder - terraform
+we create some files, content
+We create a repo on github
+
+git init
+git branch -M main
+git remote add origin git@github.com:dipesh017/test.git
+
+
+UPLOAD THE CODE->
+git add .
+git commit -m "message"
+git push origin main
+
+DOWNLOAD THE CODE->
+git pull origin main

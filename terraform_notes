@@ -1,0 +1,9 @@
+2 states in terraform
+
+Desired state: what you need / desire/ want
+
+Current state: real / actual in aws
+
+Job of terraform -> Desire = Current
+
+terraform plan - tells you the diff b/w desire and current
