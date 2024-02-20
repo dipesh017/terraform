@@ -35,3 +35,30 @@ output "manual_vpc_id" {
 }
 
 ------------------------------------------------------------
+
+For each
+
+replicate non identical instances
+
+Works for sets and map
+
+Set vs list - set cant have duplicate values
+
+Generally we pass input in form of list, so we convert that list into set via toset
+
+variable "new_user_name" {
+    default = ["rami2","dipesh2"]
+  }
+resource "aws_iam_user" "iamuser" {
+    for_each = toset(var.new_user_name)
+    name = each.key
+    
+    tags = {
+      Name = each.key
+    }
+}
+output "iamuser" {
+    value = [
+      for x in aws_iam_user.iamuser : x.id
+    ]
+}
