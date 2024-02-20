@@ -9,7 +9,7 @@ resource "aws_iam_user" "user" {
 
 
 resource "aws_iam_user" "iamuser" {
-  for_each = toset(var.user_name)
+  for_each = toset(var.new_user_name)
   name = each.key
   
   tags = {

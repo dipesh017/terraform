@@ -10,3 +10,6 @@ variable "env" {
 variable "user_name" {
   default = ["rami","shyam"]
 }
+variable "new_user_name" {
+  default = ["rami","shyam","dipesh"]
+}
