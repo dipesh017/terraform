@@ -1,0 +1,37 @@
+count - replicate identical instances
+
+count = var.enabled ? 1 : 0
+
+Inputs:
+cidr = var.vpc_cidr[count.index]
+
+output "name" {
+    value = aws_vpc.main.id[0]
+}
+output "name" {
+    value = aws_vpc.main.id[*]
+}
+
+------------------------------------------------------------
+
+Data Blocks
+
+When we want to fetch some aws info and want to make that info as a part of terraform
+
+data "aws_vpc" "selected" {
+    tags = { Name = "manual-vpc" }
+  }
+  
+resource "aws_subnet" "main" {
+    vpc_id     = data.aws_vpc.selected.id #"vpc-00187b5ed09f73ca1"
+    cidr_block = "10.200.1.0/24"
+  
+    tags = {
+      Name = "public-subnet-1"
+    }
+}
+output "manual_vpc_id" {
+    value = data.aws_vpc.selected.id
+}
+
+------------------------------------------------------------
