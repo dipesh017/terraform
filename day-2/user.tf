@@ -1,7 +1,8 @@
 resource "aws_iam_user" "user" {
-  name = "rami"
+  count = 2
+  name = var.user_name
 
   tags = {
-    Name = "rami"
+    Name = var.user_name
   }
 }

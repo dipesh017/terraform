@@ -7,3 +7,6 @@ variable "name" {
 variable "env" {
   default = "dev"
 }
+variable "user_name" {
+  default = ["rami", "dipesh"]
+}
