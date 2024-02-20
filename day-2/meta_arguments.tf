@@ -15,3 +15,13 @@ resource "aws_vpc" "main" {
     Environment = "development"
   }
 }
+resource "aws_vpc" "manual" {
+  cidr_block       = "10.200.0.0/16"
+  instance_tenancy = "default"
+
+
+  tags = {
+    Name = "tka-vpc"
+    Environment = "development"
+  }
+}
