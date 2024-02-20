@@ -104,3 +104,21 @@ resource "aws_iam_user" "iamusermap2" {
     Email = each.value.email
   }
 }
+
+output "user_iamusermap1" {
+  value = {
+    for x,y in aws_iam_user.iamusermap1 : x => y.arn
+  }
+}
+
+------------EXAMPLE---------------------
+
+resource "aws_security_group" "this" {
+  for_each = var.security_groups
+
+
+output "security_group_ids" ={
+  value = {
+    for x,y in aws_security_group.this : x => y.id
+  }
+}
