@@ -21,11 +21,11 @@ variable "user_data" {
 }
 variable "user_info" {
   default = {
-    rami3 = {
+    rami4 = {
       email = "rami@gmail.com"
       phone = "1234"
     }
-    dipesh3 = {
+    dipesh4 = {
       email = "dipesh@gmail.com"
       phone = "6789"
     }

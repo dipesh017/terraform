@@ -50,3 +50,8 @@ output "rami_user_id" {
 output "user_id" {
   value = aws_iam_user.user[*].id
 }
+output "user_iamusermap1" {
+  value = {
+    for x,y in aws_iam_user.user_iamusermap1 : x => y.id
+  }
+}
