@@ -19,6 +19,9 @@ resource "aws_vpc" "manual" {
   cidr_block       = "10.200.0.0/16"
   instance_tenancy = "default"
 
+  provisioner "local-exec" {
+    command = "echo ${aws_vpc.manual.id} >> vpc.txt"
+  }
 
   tags = {
     Name = "tka-vpc"
