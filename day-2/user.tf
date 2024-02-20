@@ -52,6 +52,6 @@ output "user_id" {
 }
 output "user_iamusermap1" {
   value = {
-    for x,y in aws_iam_user.iamusermap1 : x => y.id
+    for x,y in aws_iam_user.iamusermap1 : x => y.arn
   }
 }
