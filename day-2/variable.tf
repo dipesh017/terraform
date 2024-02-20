@@ -11,5 +11,5 @@ variable "user_name" {
   default = ["rami","shyam"]
 }
 variable "new_user_name" {
-  default = ["rami2","dipesh2","rami2"]
+  default = ["rami2","dipesh2"]
 }

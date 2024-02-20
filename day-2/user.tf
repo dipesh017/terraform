@@ -17,6 +17,12 @@ resource "aws_iam_user" "iamuser" {
   }
 }
 
+
+output "iamuser" {
+  value = [
+    for x in aws_iam_user.iamuser : x.id
+  ]
+}
 output "rami_user_id" {
   value = aws_iam_user.user[0].id
 }
