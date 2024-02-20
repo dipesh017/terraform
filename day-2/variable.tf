@@ -8,5 +8,5 @@ variable "env" {
   default = "dev"
 }
 variable "user_name" {
-  default = ["rami", "dipesh","shyam"]
+  default = ["rami","shyam"]
 }
