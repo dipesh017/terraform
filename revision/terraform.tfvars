@@ -1,1 +1,1 @@
-name="rami-vpc"
+name = "rami-vpc"
