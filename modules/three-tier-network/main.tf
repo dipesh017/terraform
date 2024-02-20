@@ -1,5 +1,9 @@
+locals {
+  cidr_block = "10.100.0.0/16"
+}
 resource "aws_vpc" "this" {
-  cidr_block       = "10.100.0.0/16"
+  count = 1
+  cidr_block       = local.cidr_block
   instance_tenancy = "default"
 
   tags = {
