@@ -5,12 +5,6 @@ terraform {
       version = "5.37.0"
     }
   }
-  backend "s3" {
-    bucket         = "terraform-tka"
-    key            = "revision/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "terraform"
-  }
 }
 
 provider "aws" {
