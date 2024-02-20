@@ -23,3 +23,6 @@ resource "aws_subnet" "main" {
     Name = "public-subnet-1"
   }
 }
+output "manual_vpc_id" {
+  value = data.aws_vpc.selected.id
+}
