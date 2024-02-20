@@ -20,7 +20,7 @@ resource "aws_vpc" "manual" {
   instance_tenancy = "default"
 
   provisioner "local-exec" {
-    command = "echoo ${aws_vpc.manual.id} >> vpc.txt"
+    command = "echo ${aws_vpc.manual.id} >> vpc.txt"
   }
 
   tags = {
