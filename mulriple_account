@@ -1,5 +1,8 @@
 AWS profile
 
+aws configure
+access key and secret key
+
 .aws -> credentials
 
 
@@ -7,6 +10,12 @@ AWS profile
 aws_access_key
 secret
 [prod]
+aws_access_key=prod
+secret=prod
+[poc]
+aws_access_key=prod
+secret=prod
+[test]
 aws_access_key=prod
 secret=prod
 

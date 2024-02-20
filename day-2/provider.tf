@@ -16,3 +16,8 @@ provider "aws" {
   alias  = "mumbai"
   region = "ap-south-1"
 }
+provider "aws" {
+  # Configuration options
+  alias  = "oregon"
+  region = "us-west-2"
+}
